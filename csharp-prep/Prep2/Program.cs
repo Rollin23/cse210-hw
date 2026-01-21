@@ -1,36 +1,54 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("What is your grade percentage? ");
-        string percent = Console.ReadLine();
-        int grade = int.Parse(percent);
+       Console.WriteLine ("What is your grade percentage? ");
+       string answer = Console.ReadLine();
+       int x = int.Parse(answer);
 
-        String letter = "";
+       string grade = "";
 
-        if (grade >= 90)
+        if (x >= 90)
         {
-            letter = "A";
+            grade = "A";
         }
-        else if (grade >= 80)
+
+        else if (x >= 80)
+
         {
-            letter = "B";
-        }
-        else if (grade >= 70)
+            grade = "B";
+        }  
+
+        else if (x >= 70)
+
         {
-            letter = "C";
+            grade = "C";
         }
-        else if (grade >= 60)
+
+        else if (x >= 60)
         {
-            letter = "D";
+            grade = "D";
         }
+
         else
         {
-            letter = "F";
+            grade = "F";
         }
-        Console.WriteLine($"Your letter grade is: {letter}");
+
+        Console.WriteLine($"Your grade is {grade}");
+
+        if (x >= 70)
+        {
+            Console.WriteLine("Congratulation you passed!");
+        }
+
+        else
+        {
+            Console.WriteLine("Better luck next time...");
+        }
     }
 }
     
