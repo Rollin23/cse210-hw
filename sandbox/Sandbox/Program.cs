@@ -3,20 +3,9 @@ using System.Runtime.CompilerServices;
 
 partial class Program
 {
-        static void Main(string[] args)
-        // {
-        //     Car myCar = new Car();
-        //     myCar.Run();
-        // }
-            {
-        CircuitBoard myCircuit = new CircuitBoard();
-        
-        // Setup the components
-        myCircuit.PowerSource.Voltage = 12.0;      // 12V Battery
-        myCircuit.Resistor.Resistance = 100.0;    // 100 Ohm Resistor
-        myCircuit.Bulb.RequiredCurrent = 0.15;    // Bulb needs 0.15 Amps to shine
+    static void Main(string[] args)
 
-        // Perform the check
-        myCircuit.CalculateSafety();
+    {
+        Console.WriteLine("hello world");
     }
  }
