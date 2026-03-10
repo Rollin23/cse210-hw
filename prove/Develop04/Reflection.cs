@@ -55,7 +55,7 @@ public class Reflection : Activity
             int y = rand.Next(thoughtPrompt.Length); 
             Console.Write($" {thoughtPrompt[y]}");
 
-            Spinner();
+            Spinner2();
             Console.WriteLine();
         }
 

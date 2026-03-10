@@ -69,4 +69,22 @@ public class Activity
         }
     }
 
+        public static void Spinner2()
+    {
+        List<string> spinner = new List<string>();
+        spinner.Add("o");
+        spinner.Add("x");
+        spinner.Add("*");
+        spinner.Add("+");
+        for (int i = 0; i < 4; i++)
+        {
+            foreach (string s in spinner)
+            {
+                Console.Write(s);
+                Thread.Sleep(400);
+                Console.Write("\b \b");
+            }
+        }
+    }
+
 }
