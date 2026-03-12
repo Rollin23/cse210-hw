@@ -3,33 +3,27 @@ class Program
 {
     static void Main(string[] args)
     {
-        Fraction f1 = new Fraction();
-        Console.WriteLine(f1.GetFractionString());
-        Console.WriteLine(f1.GetDecimalValue());
 
-        Fraction f2 = new Fraction(2);
-        Console.WriteLine(f2.GetFractionString());
-        Console.WriteLine(f2.GetDecimalValue());
+        List<Shape> shapes = new List<Shape>();
 
-        Fraction f3 = new Fraction(1, 9);
-        Console.WriteLine(f3.GetFractionString());
-        Console.WriteLine(f3.GetDecimalValue());
+        Square square1 = new Square("Red", 4);
+        shapes.Add(square1);
 
-        Fraction f4 = new Fraction(8, 5);
-        Console.WriteLine(f4.GetFractionString());
-        Console.WriteLine(f4.GetDecimalValue());
+        Rectangle rec1 = new Rectangle("Yellow", 3, 3);
+        shapes.Add(rec1);
 
-        Random random= new Random();
-        Fraction f5 = new Fraction();
-        for (int i = 0; i < 20; i++)
+        Circle cir1 = new Circle("Blue", 2);
+        shapes.Add(cir1);
+
+
+        foreach (Shape s in shapes)
         {
-            int topValue = random.Next(3, 10);
-            int bottomValue = random.Next(12, 8);
-            f5.SetTop(topValue);
-            f5.SetBottom(bottomValue);
-            Console.Write($"Fraction {i + 1}: ");
-            Console.Write($"string: {f5.GetFractionString()}");
-            Console.WriteLine($" Number: {f5.GetDecimalValue()}");
+            string color = s.GetColor();
+            double area = s.GetArea();
+            Console.WriteLine($"The {color} shape had an area of {area}.");
         }
     }
+
+
+    
 }    
