@@ -1,9 +1,10 @@
 using System;
 
-class Program
+class Program : Goal
 {
-    static void Main(string[] args)
+    protected int _score;
+    static void Main(string[] args) 
     {
-        Console.WriteLine("Hello Develop05 World!");
+        
     }
 }
