@@ -9,6 +9,10 @@ public class Lecture : Event
         _capacity = capacity;
     }
 
+        public string GetLectureEvent()
+    {
+        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} Speaker: {_speaker} Capacity: {_capacity}";
+    }
 
 
 

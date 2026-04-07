@@ -5,4 +5,9 @@ public class Outdoor : Event
     {
         _weather = weather;
     }
+
+        public string GetOutdoorEvent()
+    {
+        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} Weather: {_weather} ";
+    }
 }

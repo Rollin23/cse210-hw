@@ -6,4 +6,9 @@ public class Reception : Event
     {
         _rsvp = rsvp;
     }
+
+        public string GetReceptionEvent()
+    {
+        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} RSVP: {_rsvp}";
+    }
 }
