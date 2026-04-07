@@ -9,7 +9,7 @@ public class Video
     private List<Comment> _comments = new List<Comment>();
 
 
-    public void SetVideo(string Title, string Author, int Length)
+    public Video(string Title, string Author, int Length)
     {
         _title = Title;
         _author = Author;
@@ -19,10 +19,6 @@ public class Video
     { 
         _comments.Add(comment);
         _count ++;
-    }
-    public int GetCommentCount()
-    {
-        return _count;
     }
 
     public void Display()
