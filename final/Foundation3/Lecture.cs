@@ -3,15 +3,15 @@ public class Lecture : Event
     protected string _speaker;
     protected int _capacity;
 
-    public Lecture(string title, string description, DateTime timeStamp, string address, string speaker, int capacity):base(title, description, timeStamp, address)
+    public Lecture(string title, string description, string timeStamp, Address address, string eventType, string speaker, int capacity):base(title, description, timeStamp, address, eventType)
     {
         _speaker = speaker;
         _capacity = capacity;
     }
 
-        public string GetLectureEvent()
+    public string GetLectureEvent()
     {
-        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} Speaker: {_speaker} Capacity: {_capacity}";
+        return "Speaker: " + _speaker + "\nCapacity: " + _capacity + "\n";
     }
 
 

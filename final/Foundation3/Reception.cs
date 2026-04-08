@@ -2,13 +2,13 @@ public class Reception : Event
 {
     private string _rsvp;
     
-    public Reception(string title, string description, DateTime timeStamp, string address, string speaker, int capacity, string rsvp):base(title, description, timeStamp, address)
+    public Reception(string title, string description, string timeStamp, Address address, string eventType, string rsvp):base(title, description, timeStamp, address, eventType)
     {
         _rsvp = rsvp;
     }
 
         public string GetReceptionEvent()
     {
-        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} RSVP: {_rsvp}";
+        return "RSVP: " +_rsvp + "\n";
     }
 }

@@ -3,30 +3,31 @@ public class Event
 {
     protected string _title;
     protected string _description;
-    protected DateTime _timeStamp;
-    private string _eventType;
-    protected string _address;
+    protected string _timeStamp;
+    protected string _eventType;
+    protected Address _address;
 
-    public Event(string title, string description, DateTime timeStamp, string address)
+    public Event(string title, string description, string timeStamp, Address address, string eventType)
     {
         _title = title;
         _description = description;
         _timeStamp = timeStamp;
         _address = address;
+        _eventType = eventType; 
     }
 
     public string GetStandardDetails()
     {
-        return $"Title: {_title} Description:  {_description} Date: {_timeStamp} Address: {_address} ";
+        return $"Title: " + _title + "\nDescription: " + _description + "\nDate: " + _timeStamp + "\nAddress: " + _address.GetAddress() + "\n";
     }
     
-    public string GetSFullDetails()
+    public string GetFullDetails()
     {
-        return $"Title: {_title} Description:  {_description} Time: {_timeStamp} Address: {_address} Event Type: ";
+        return $"\nTitle: " + _title + "\nEvent Type: " + _eventType + "\nDescription: " + _description + "\nTime: " + _timeStamp + "\nAddress:" + _address.GetAddress();
     }
     
     public string GetShortDetails()
     {
-        return $"Title: {_title} Type: {_eventType} Date: {_timeStamp}";
+        return $"Title: " + _title + "\nType: " + _eventType + "\nDate: " + _timeStamp + "\n";
     }
 }
